@@ -24,3 +24,20 @@ function MODULE_views_pre_render(ViewExecutable $view) {
    $view->result = $new_result;
   }
 }
+
+
+Bulk delete command line using drush scr
+
+use Drupal\Core\DrupalKernel;
+use Drupal\Core\Site\Settings;
+
+$autoloader = require_once __DIR__ . '/autoload.php';
+
+$nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+
+foreach ($nodes as $key => $node) {
+  $type = $node->getType();
+  if ($type == 'CONTENT_TYPE') {
+    print $node->delete() . ".";
+  }
+}
