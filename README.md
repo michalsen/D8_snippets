@@ -1,6 +1,6 @@
 
 
-
+Various snippets to reuse in this Drupal 8 adventure
 
 ```
 
@@ -10,7 +10,7 @@
  *
  *  use Drupal\views\ViewExecutable;
  */
-function cncex_views_views_pre_render(ViewExecutable $view) {
+function MODULE_views_pre_render(ViewExecutable $view) {
   if ($view->id() == 'filter_manufacturer') {
     $manufacturers = [];
     $new_result = [];
