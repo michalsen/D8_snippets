@@ -3,7 +3,6 @@
 Various snippets to reuse in this Drupal 8 adventure
 
 ```
-
 use Drupal\views\ViewExecutable;
 
 /**
@@ -24,10 +23,10 @@ function MODULE_views_pre_render(ViewExecutable $view) {
    $view->result = $new_result;
   }
 }
-
+```
 
 Bulk delete command line using drush scr
-
+```
 use Drupal\Core\DrupalKernel;
 use Drupal\Core\Site\Settings;
 
@@ -41,3 +40,4 @@ foreach ($nodes as $key => $node) {
     print $node->delete() . ".";
   }
 }
+```
