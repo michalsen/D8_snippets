@@ -2,6 +2,7 @@
 
 
 
+```
 
 /**
  *  Implements hook_views_pre_render()
