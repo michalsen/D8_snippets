@@ -4,11 +4,12 @@ Various snippets to reuse in this Drupal 8 adventure
 
 ```
 
+use Drupal\views\ViewExecutable;
+
 /**
  *  Implements hook_views_pre_render()
  *  Distinct Results
  *
- *  use Drupal\views\ViewExecutable;
  */
 function MODULE_views_pre_render(ViewExecutable $view) {
   if ($view->id() == 'filter_manufacturer') {
